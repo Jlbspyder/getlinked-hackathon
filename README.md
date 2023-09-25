@@ -17,6 +17,7 @@ This is a simple budget planner that allows users to be able to:
 - Flexbox
 - Mobile-first workflow
 - React Icons
+- React Scroll
 - React Router Dom
 - [React](https://reactjs.org/) - JS library
 
