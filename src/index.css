@@ -946,6 +946,9 @@ footer {
   position: absolute;
   bottom: 10%;
   left: 25%;
+}
+.arrow-up {
+  display: none;
 } 
 
 @media (min-width: 770px) {
@@ -1841,6 +1844,7 @@ footer {
     width: 1.1rem;
   }
   .arrow-up {
+    display: block;
     position: absolute;
     right: -1%;
     bottom: 30%;
@@ -2075,6 +2079,7 @@ footer {
   .left, .right {
     width: 50%;
   }
+  .faqs__img
   .one {
     position: absolute;
     top: 6%;
@@ -2127,6 +2132,9 @@ footer {
   .circle6 {
     top: 87%;
     left: 46.3%;
+  }
+  .faqs__img .mobile-thinking {
+    margin-top: 8rem;
   }
   .bar1 {
     top: -4%;
