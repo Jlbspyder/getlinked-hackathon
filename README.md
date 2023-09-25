@@ -8,7 +8,7 @@ This is a simple budget planner that allows users to be able to:
 
 ### Links
 
-- Live Site URL: [https://peppy-pastelito-be94e8.netlify.app/](https://peppy-pastelito-be94e8.netlify.app/)
+- Live Site URL: [https://jlb-getlinked.netlify.app/](https://jlb-getlinked.netlify.app/)
 
 ### Built with
 
