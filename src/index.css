@@ -226,7 +226,7 @@ form {
 .reg-form h1 {
   text-transform: uppercase;
   margin: 0.5rem 0 2rem 0;
-  font-size: 1.9rem;
+  font-size: 1.7rem;
 }
 .register h2 {
   color: var(--purplishPink);
@@ -244,17 +244,17 @@ form {
 }
 .line {
   position: absolute;
-  top: 27%;
+  top: 29.5%;
   left: 55%;
 }
 .woman {
   position: absolute;
-  top: 25%;
+  top: 27.7%;
   left: 59%;
 }
 .man {
   position: absolute;
-  top: 25%;
+  top: 27.5%;
   right: 30%;
 }
 .desktop-ctl {
