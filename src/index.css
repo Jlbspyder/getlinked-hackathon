@@ -2845,21 +2845,21 @@ footer {
   }
   .line {
     position: absolute;
-    top: 27%;
+    top: 25%;
     left: 76.5%;
   }
   .woman {
     position: absolute;
-    top: 23.5%;
+    top: 21.8%;
     left: 78%;
   }
   .man {
     position: absolute;
-    top: 23.5%;
+    top: 21.5%;
     left: 80%;
   }
   .register h1 {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
   .form-top input {
     width: 95%;
