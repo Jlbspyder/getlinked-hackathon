@@ -14,7 +14,7 @@ const Footer = () => {
       <img src="/images/gray-star.png" className="foot-graystar" />
       <img src="/images/white-star.png" className="foot-whitestar" />
       <img src="/images/white-star.png" className="foot-whitestar2" />
-      <img src="/public/images/sata-star.png" className="foot-satastar" />
+      <img src="/images/sata-star.png" className="foot-satastar" />
       <Link to="header" spy={true} smooth={true} offset={-100} duration={700}>
         <BsFileArrowUp className="arrow-up" />
       </Link>

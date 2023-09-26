@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
   return (
@@ -49,7 +50,7 @@ const Hero = () => {
             Participate in getlinked tech Hackathon 2003 stand a chance to win a
             Big prize
           </p>
-          <button className="btn mobile">Register</button>
+          <Link to="/register"><button className="btn mobile">Register</button></Link>
           <h1>
             00<span>H</span> 00<span>M</span> 00<span>S</span>
           </h1>

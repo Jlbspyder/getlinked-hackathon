@@ -1,11 +1,18 @@
-import React, { useRef } from "react";
-import { Link } from "react-scroll";
+import React from "react";
+import { Link as LinkRoll } from "react-scroll";
+import { Link, useLocation } from "react-router-dom"
 
-const Header = () => {
+
+
+const Header = ({ handleOpen, close}) => {
+  
+  const location = useLocation()
+  
+
   return (
     <div className="header">
-      <div>
-        <Link to="hero" spy={true} smooth={true} offset={10} duration={700}>
+      <div onClick={close}>
+        <Link to="/" spy={true} smooth={true} offset={10} duration={700}>
           <picture>
             <source
               media="(min-width: 630px)"
@@ -21,26 +28,26 @@ const Header = () => {
         </Link>
       </div>
       <div className="menu">
-        <img src="/images/hamburger.png" alt="menu" className="hamburger" />
+        <img src="/images/hamburger.png" alt="menu" className="hamburger" onClick={handleOpen} />
         <ul>
           <li>
-            <Link to="time" spy={true} smooth={true} offset={10} duration={700}>
+            <LinkRoll to="time" spy={true} smooth={true} offset={10} duration={700}>
               Timeline
-            </Link>{" "}
+            </LinkRoll>{" "}
           </li>
           <li>
-            <Link to="hero" spy={true} smooth={true} offset={10} duration={700}>
+            <LinkRoll to="hero" spy={true} smooth={true} offset={10} duration={700}>
               Overview
-            </Link>{" "}
+            </LinkRoll>{" "}
           </li>
           <li>
-            <Link to="faq" spy={true} smooth={true} offset={10} duration={700}>
+            <LinkRoll to="faq" spy={true} smooth={true} offset={10} duration={700}>
               FAQS
-            </Link>{" "}
+            </LinkRoll>{" "}
           </li>
-          <li>
+          <li className={location.pathname === "/contact" ? "active" : ""}>
             <Link
-              to="contact"
+              to="/contact"
               spy={true}
               smooth={true}
               offset={10}
@@ -50,9 +57,9 @@ const Header = () => {
             </Link>{" "}
           </li>
         </ul>
-        <div>
-          <button className="btn">Register</button>
-        </div>
+        <Link to="/register">
+          <button className={`btn ${location.pathname === "/register" ? "active" : ""}`} >Register</button>
+        </Link>
       </div>
     </div>
   );
