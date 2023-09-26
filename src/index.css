@@ -2689,12 +2689,7 @@ footer {
   .right {
     width: 50%;
   }
-<<<<<<< HEAD
   .faqs__img .one {
-=======
-  .faqs__img
-  .one {
->>>>>>> f5978ec9447738010b387d88575682bb6888745e
     position: absolute;
     top: 6%;
     left: 47.8%;
@@ -2841,7 +2836,6 @@ footer {
   .arrow-up {
     right: 0;
   }
-<<<<<<< HEAD
   .call__info p {
     font-size: 1.3rem;
   }
@@ -2880,6 +2874,4 @@ footer {
   .down-select select {
     font-size: 10px;
   }
-=======
->>>>>>> f5978ec9447738010b387d88575682bb6888745e
 }
