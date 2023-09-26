@@ -2464,7 +2464,7 @@ footer {
   .confirmation__info p {
     text-align: center;
     width: 55%;
-    margin: auto;
+    margin: auto auto 3rem auto;
   }
   .back {
     display: none;
