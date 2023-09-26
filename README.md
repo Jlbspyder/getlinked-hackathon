@@ -8,7 +8,7 @@ This is a simple budget planner that allows users to be able to:
 
 ### Links
 
-- Live Site URL: [https://peppy-pastelito-be94e8.netlify.app/](https://peppy-pastelito-be94e8.netlify.app/)
+- Live Site URL: [https://jlb-getlinked.netlify.app/](https://jlb-getlinked.netlify.app/)
 
 ### Built with
 
@@ -17,6 +17,7 @@ This is a simple budget planner that allows users to be able to:
 - Flexbox
 - Mobile-first workflow
 - React Icons
+- React Scroll
 - React Router Dom
 - [React](https://reactjs.org/) - JS library
 

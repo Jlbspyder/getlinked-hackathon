@@ -9,7 +9,10 @@ import Rewards from "../components/Rewards";
 import Sponsors from "../components/Sponsors";
 import Privacy from "../components/Privacy";
 import Footer from "../components/Footer";
+<<<<<<< HEAD
 import MobileMenu from "../components/MobileMenu";
+=======
+>>>>>>> f5978ec9447738010b387d88575682bb6888745e
 
 const HomePage = ({open, close}) => {
   return (
