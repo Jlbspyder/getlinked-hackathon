@@ -2466,6 +2466,9 @@ footer {
     width: 55%;
     margin: auto;
   }
+  .back {
+    display: none;
+  }
   footer {
     background: #0f091f;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
