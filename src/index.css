@@ -1284,8 +1284,7 @@ footer {
 }
 .arrow-up {
   display: none;
-<<<<<<< HEAD
-}
+} 
 @keyframes slow {
   0% {
     opacity: 0;
@@ -1294,9 +1293,6 @@ footer {
     opacity: 1;
   }
 }
-=======
-} 
->>>>>>> f5978ec9447738010b387d88575682bb6888745e
 
 @media (min-width: 770px) {
   .container {
