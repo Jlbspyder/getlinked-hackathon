@@ -48,7 +48,7 @@ const Register = () => {
         </div>
         <div className="reg-form">
           <form className="ctl">
-            <h2>Register</h2>
+            <h2 className="regis">Register</h2>
             <p>Be part of this movement!</p>
             <h1>create your account</h1>
             <div className="form-top">
