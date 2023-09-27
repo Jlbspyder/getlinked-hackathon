@@ -235,7 +235,7 @@ form {
 .mob {
   display: block;
   color: var(--purplishPink);
-  padding: 2rem 0 2rem 2rem;
+  padding: 2rem 0 2rem 11rem;
   width: 100%;
 }
 .designer {
