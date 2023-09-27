@@ -35,6 +35,7 @@ body {
   font-family: "Montserrat", sans-serif;
   background: var(--darkBlue);
   color: #fff;
+  overflow-x: hidden;
 }
 .container {
   min-width: 400px;
@@ -229,7 +230,6 @@ form {
 }
 .register .regis {
   display: none;
-  /* margin: 1rem 0 2rem -18rem; */
 }
 .mob {
   display: block;
@@ -357,6 +357,15 @@ form {
   text-align: center;
   font-size: 4rem;
   word-spacing: 0.5rem;
+}
+.hero__img {
+  position: relative;
+}
+.moon {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  width: 330px;
 }
 .mobile-guy {
   width: 380px;
@@ -1204,7 +1213,13 @@ footer {
   cursor: pointer;
 }
 .footer-one .inline .in {
-  padding-left: 1rem;
+  padding-left: 1rem
+}
+.footer-one .inline .in .active {
+  color: #fff;
+}
+.footer-one .inline .in .active:hover {
+  color: var(--purplishPink);
 }
 .footer-one .in:hover {
   color: var(--purplishPink);
@@ -1300,7 +1315,7 @@ footer {
 @media (min-width: 770px) {
   .container {
     margin: 30px auto;
-    max-width: 1235px;
+    max-width: 1440px;
   }
   .hamburger {
     display: none;
@@ -1317,6 +1332,16 @@ footer {
   }
   .desktop-logo {
     margin-left: 3rem;
+  }
+  .hero__img {
+    width: 530px;
+    height: 460px;
+  }
+  .mobile-guy {
+    width: 100%;
+  }
+  .moon {
+    margin-right: 3.5rem;
   }
   .menu {
     display: flex;
@@ -1729,7 +1754,7 @@ footer {
     border-right: 1px solid rgb(61, 56, 56);
     border-top: 1px solid rgb(61, 56, 56);
     margin-top: -1rem;
-    width: 98%;
+    width: 97%;
   }
   .idea__pix {
     position: relative;
@@ -2497,9 +2522,6 @@ footer {
   .footer-one h2 span {
     color: var(--purplishPink);
   }
-  .footer-one .in {
-    border-left: 2px solid #d434fe;
-  }
   .footer-one .inline {
     display: flex;
     gap: 1rem;
@@ -2592,6 +2614,17 @@ footer {
   }
   .hero__info p {
     width: 90%;
+  }
+  .moon {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    width: 330px;
+  }
+  .mobile-guy {
+    width: 500px;
+    height: 500px;
+    margin-bottom: -3px;
   }
   .hero__info .hero-title-top {
     margin: 0 0 0 2rem;
