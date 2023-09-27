@@ -116,7 +116,6 @@ ul,
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-inline: 3rem;
   animation: slow 0.5s ease-in-out;
 }
 .call__info p {
@@ -131,7 +130,6 @@ ul,
 }
 form {
   width: 370px;
-  padding-inline: 1rem;
 }
 .form-control {
   position: relative;
