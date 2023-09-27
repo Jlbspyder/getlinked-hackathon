@@ -1402,6 +1402,7 @@ footer {
   }
   .post {
     align-items: flex-start;
+    padding-left: 1rem;
   }
   .form {
     width: 40%;
