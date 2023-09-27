@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-scroll";
+import { Link as LinkRoll } from "react-scroll";
+import { Link } from "react-router-dom";
 import { BsInstagram } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
@@ -15,9 +16,15 @@ const Footer = () => {
       <img src="/images/white-star.png" className="foot-whitestar" />
       <img src="/images/white-star.png" className="foot-whitestar2" />
       <img src="/images/sata-star.png" className="foot-satastar" />
-      <Link to="header" spy={true} smooth={true} offset={-100} duration={700}>
+      <LinkRoll
+        to="header"
+        spy={true}
+        smooth={true}
+        offset={-100}
+        duration={700}
+      >
         <BsFileArrowUp className="arrow-up" />
-      </Link>
+      </LinkRoll>
       <div className="footer">
         <div className="footer-one">
           <h2 className="headerTitle">
@@ -29,16 +36,68 @@ const Footer = () => {
             young and talented individuals in the field of technology
           </p>
           <div className="inline">
-            <p className="terms">Terms of Use </p>
-            <p className="in">Privacy Policy</p>
+            <p className="terms">
+              <LinkRoll
+                to="rules"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={700}
+              >
+                Terms of Use
+              </LinkRoll>
+            </p>
+            <p className="in">
+              <LinkRoll
+                to="privacy"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={700}
+              >
+                Privacy Policy
+              </LinkRoll>
+            </p>
           </div>
         </div>
         <div className="footer-two">
           <h3 className="ft">Useful Links</h3>
-          <li>Overview</li>
-          <li>Timeline</li>
-          <li>FAQs</li>
-          <li>Register</li>
+          <li>
+            <LinkRoll
+              to="hero"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={700}
+            >
+              OverView
+            </LinkRoll>
+          </li>
+          <li>
+            <LinkRoll
+              to="time"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={700}
+            >
+              Timeline
+            </LinkRoll>
+          </li>
+          <li>
+            <LinkRoll
+              to="faq"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={700}
+            >
+              FAQS
+            </LinkRoll>
+          </li>
+          <li>
+            <Link to="/register"> Register</Link>
+          </li>
           <div className="links">
             <div>
               <h4>Follow us</h4>
