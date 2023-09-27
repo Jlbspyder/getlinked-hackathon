@@ -64,12 +64,12 @@ const Hero = () => {
           </div>
           <div className="hero__img">
             <img
-              src="/public/images/man-wearing-smart-glasses-touching-virtual-screen 1.png"
-              alt=""
+              src="/images/man-wearing-smart-glasses-touching-virtual-screen 1.png"
+              alt="man"
               className="mobile-guy"
             />
             <img
-              src="/public/images/moon-desktop.svg"
+              src="/images/moon-desktop.svg"
               alt="virtual"
               className="moon"
             />
