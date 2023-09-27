@@ -119,12 +119,13 @@ ul,
   animation: slow 0.5s ease-in-out;
 }
 .call__info p {
-  margin: 2rem 0;
+  margin: 2rem 0 2rem 1rem;
   width: 85%;
 }
 .call__info h2 {
   color: var(--purplishPink);
   width: 80%;
+  margin-left: 1rem;
   line-height: 1.4;
   font-size: 1.7rem;
 }
