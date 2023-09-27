@@ -2,7 +2,7 @@ import React from 'react'
 
 const Rules = () => {
   return (
-    <div className="rule idea flex">
+    <div className="rule idea flex" id='rules'>
         <img src="/images/Purple-Lens-Flare-straight.png" alt="flare" className='purple-bg' />
         <img src="/images/Purple-Lens-Flare-straight.png" alt="flare" className='purple-bg2' />
         <div className='idea__pix'>
