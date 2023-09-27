@@ -64,7 +64,7 @@ const Hero = () => {
           </div>
           <div className="hero__img">
             <img
-              src="/images/man-wearing-smart-glasses-touching-virtual-screen 1.png"
+              src="/images/hackathon-guy-desktop2.png"
               alt="man"
               className="mobile-guy"
             />
