@@ -167,7 +167,7 @@ small {
 .form-control label {
   position: absolute;
   top: 25px;
-  left: 0;
+  left: 15px;
 }
 .form-control label span {
   display: inline-block;
