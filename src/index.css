@@ -120,7 +120,7 @@ ul,
   animation: slow 0.5s ease-in-out;
 }
 .call__info p {
-  margin: 2rem 0 2rem 1rem;
+  margin: 2rem 0 3rem 1rem;
   width: 85%;
 }
 .call__info h2 {
@@ -133,12 +133,23 @@ ul,
 form {
   width: 370px;
 }
+.success {
+  font-size: 1.5rem;
+  background: green;
+  border-radius: 5px;
+  width: 90%;
+  text-align: center;
+}
 .form-control {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
+}
+small {
+  color: red;
+  align-self: flex-start;
 }
 .form-control input {
   background: transparent;
@@ -151,21 +162,40 @@ form {
 }
 .form-control input:focus {
   outline: 0;
+  border: 2px solid #d434fe;
 }
 .form-control label {
   position: absolute;
   top: 25px;
   left: 0;
 }
+.form-control label span {
+  display: inline-block;
+  font-size: 16px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.form-control input:focus + label span,
+.form-control textarea:focus + label span,
+.form-control input:valid + label span {
+  transform: translateY(-49px);
+  color: var(--purplishPink);
+}
+.form-control textarea:focus + label span {
+  transform: translateY(-49px);
+  color: var(--purplishPink);
+}
 #msg {
   width: 100%;
   background: transparent;
+  padding: 1rem 0 0 1rem;
   border: 2px solid white;
   border-radius: 8px;
   color: #fff;
 }
 #msg:focus {
   outline: 0;
+  border: 2px solid #d434fe;
 }
 .post {
   display: flex;
@@ -184,7 +214,7 @@ form {
 .contact-whitestar {
   position: absolute;
   bottom: 20%;
-  right: 5%;
+  right: 0;
   width: 1.3rem;
 }
 .contact-satastar {
@@ -1411,13 +1441,14 @@ footer {
     display: block;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 3rem;
     transition: all 350ms cubic-bezier(0.16, 1, 0.3, 1);
     animation: slow 1s ease-in-out;
   }
   .call__info {
     padding-left: 8rem;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
   .call__info h2 {
     margin-top: 2rem;
@@ -1429,12 +1460,22 @@ footer {
     align-items: flex-start;
     padding-left: 1rem;
   }
+  .form-wrapper {
+    width: 50%;
+  }
   .form {
-    width: 40%;
-    margin-right: 6.5rem;
+    width: 90%;
+    padding: 1.5rem 0 1.5rem 0;
     background: #211a33;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     border-radius: 5px;
+  }
+  .success {
+    font-size: 1.5rem;
+    background: green;
+    border-radius: 5px;
+    width: 90%;
+    text-align: center;
   }
   form {
     width: 80%;
@@ -1453,8 +1494,18 @@ footer {
     top: 20px;
     left: 20px;
   }
+  .form-control input:focus + label span,
+  .form-control textarea:focus + label span
+  .form-control input:valid + label span {
+  transform: translateY(-43px);
+  color: var(--purplishPink);
+}
+  .form-control textarea:focus + label span {
+  transform: translateY(-43px);
+  color: var(--purplishPink);
+}
   .form h2 {
-    margin: 2rem 0 2rem 4.5rem;
+    margin: 1rem 0 3rem 4.5rem;
     color: var(--purplishPink);
   }
   .btn.sub {
@@ -1467,7 +1518,7 @@ footer {
   }
   .contact-whitestar {
     bottom: 0;
-    right: 0;
+    right: 3%;
     z-index: 500;
     width: 1.3rem;
   }
@@ -2880,8 +2931,14 @@ footer {
   .arrow-up {
     right: 0;
   }
+  .desktop-call {
+    margin-top: 5rem;
+  }
   .call__info p {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+  }
+  .form h2 {
+    margin-left: 2.5rem;
   }
   .register h1 {
     font-size: 1.3rem;
