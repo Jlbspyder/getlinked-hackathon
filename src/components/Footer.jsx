@@ -132,9 +132,9 @@ const Footer = () => {
                 <HiLocationMarker />
               </div>
               <div>
-                <li>27, Alara Street</li>
-                <li>Yaba 100012</li>
-                <li>Lagos State</li>
+                <p>27, Alara Street</p>
+                <p>Yaba 100012</p>
+                <p>Lagos State</p>
               </div>
             </div>
           </div>
