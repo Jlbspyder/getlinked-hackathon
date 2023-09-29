@@ -1767,9 +1767,12 @@ footer {
     justify-content: left;
     width: 45%;
   }
-  .hrs, .mins, .sec {
-    width: 100%;
+  .hrs, .mins {
+    width: 30%;
     text-align: left;
+  }
+  .sec {
+    margin-left: 1rem;
   }
   .chain {
     display: block;
@@ -3043,7 +3046,7 @@ footer {
   }
   .time {
     font-size: 4rem;
-    gap: 1rem;
+    gap: 2rem;
   }
 }
 @media (min-width: 450px) and (max-width: 1200px) {
