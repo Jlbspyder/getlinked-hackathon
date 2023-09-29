@@ -1,18 +1,13 @@
 import React from "react";
-import { Link as LinkRoll } from "react-scroll";
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom";
 
-
-
-const Header = ({ handleOpen, close}) => {
-  
-  const location = useLocation()
-  
+const Header = ({ handleOpen, close }) => {
+  const location = useLocation();
 
   return (
     <div className="header">
       <div onClick={close}>
-        <Link to="/" spy={true} smooth={true} offset={10} duration={700}>
+        <Link to="/">
           <picture>
             <source
               media="(min-width: 630px)"
@@ -28,37 +23,34 @@ const Header = ({ handleOpen, close}) => {
         </Link>
       </div>
       <div className="menu">
-        <img src="/images/hamburger.png" alt="menu" className="hamburger" onClick={handleOpen} />
+        <img
+          src="/images/hamburger.png"
+          alt="menu"
+          className="hamburger"
+          onClick={handleOpen}
+        />
         <ul>
-          <li>
-            <LinkRoll to="time" spy={true} smooth={true} offset={10} duration={700}>
-              Timeline
-            </LinkRoll>{" "}
+          <li className={location.pathname === "/timeline" ? "active" : ""}>
+            <Link to="/timeline">Timeline</Link>
           </li>
-          <li>
-            <LinkRoll to="hero" spy={true} smooth={true} offset={10} duration={700}>
-              Overview
-            </LinkRoll>{" "}
+          <li className={location.pathname === "/overview" ? "active" : ""}>
+            <Link to="/overview">Overview</Link>
           </li>
-          <li>
-            <LinkRoll to="faq" spy={true} smooth={true} offset={10} duration={700}>
-              FAQS
-            </LinkRoll>{" "}
+          <li className={location.pathname === "/faq" ? "active" : ""}>
+            <Link to="/faq">FAQS</Link>
           </li>
           <li className={location.pathname === "/contact" ? "active" : ""}>
-            <Link
-              to="/contact"
-              spy={true}
-              smooth={true}
-              offset={10}
-              duration={700}
-            >
-              Contact
-            </Link>{" "}
+            <Link to="/contact">Contact</Link>{" "}
           </li>
         </ul>
         <Link to="/register">
-          <button className={`btn ${location.pathname === "/register" ? "active" : ""}`} >Register</button>
+          <button
+            className={`btn ${
+              location.pathname === "/register" ? "active" : ""
+            }`}
+          >
+            Register
+          </button>
         </Link>
       </div>
     </div>
