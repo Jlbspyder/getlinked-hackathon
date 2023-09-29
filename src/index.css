@@ -3043,7 +3043,7 @@ footer {
   }
   .time {
     font-size: 4rem;
-    gap: 1.5rem;
+    gap: 3rem;
   }
 }
 @media (min-width: 450px) and (max-width: 1200px) {
