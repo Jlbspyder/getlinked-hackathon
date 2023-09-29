@@ -1,10 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
+  let currentTime = new Date().toLocaleTimeString();
+  const [time, setTime] = useState(currentTime);
+
+  let hrs = new Date().getHours();
+  let mins = new Date().getMinutes();
+  let sec = new Date().getSeconds();
+
+  const updateTime = () => {
+    let currentTime = new Date().toLocaleTimeString();
+    setTime(currentTime);
+  };
+  setInterval(updateTime, 1000);
+
+  const hours = hrs.toString().padStart(2, "0");
+  const minutes = mins.toString().padStart(2, "0");
+  const seconds = sec.toString().padStart(2, "0");
+
   return (
     <>
-      <div id="hero">
+      <div>
         <img
           src="/images/Purple-Lens-Flare-straight.png"
           alt="lens"
@@ -58,18 +75,30 @@ const Hero = () => {
             <Link to="/register">
               <button className="btn mobile">Register</button>
             </Link>
-            <h1>
-              00<span>H</span> 00<span>M</span> 00<span>S</span>
-            </h1>
+
+            <div className="time">
+              <div className="hrs">
+                {hours}
+                <span className="hrs">H</span>
+              </div>
+              <div className="mins">
+                {minutes}
+                <span className="mins">M</span>
+              </div>
+              <div className="sec">
+                {seconds}
+                <span className="sec">S</span>
+              </div>
+            </div>
           </div>
           <div className="hero__img">
             <img
               src="/images/hackathon-guy-desktop2.png"
-              alt="man"
+              alt="boy"
               className="mobile-guy"
             />
             <img
-              src="/images/moon-desktop.svg"
+              src="/public/images/moon-desktop.svg"
               alt="virtual"
               className="moon"
             />
