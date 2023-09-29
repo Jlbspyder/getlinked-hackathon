@@ -98,7 +98,7 @@ const Hero = () => {
               className="mobile-guy"
             />
             <img
-              src="/public/images/moon-desktop.svg"
+              src="/images/moon-desktop.svg"
               alt="virtual"
               className="moon"
             />
