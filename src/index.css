@@ -88,17 +88,21 @@ body {
   border-radius: 50%;
   border: 1px solid #d434fe;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-  background: #1e1e1e;
+  background:  linear-gradient(to left, #903aff, #ff26b9);
   color: #fff;
   font-weight: bold;
   font-size: 1.8rem;
   margin: 2.5rem 3rem 0 83%;
 }
 .call.close-btn {
+  position: relative;
   margin: 1rem 3rem 3rem 1rem;
-  padding: 5px 5px 0 0;
+  padding-right: 5px;
   width: 40px;
   height: 40px;
+}
+.call.close-btn:hover {
+  background: #1e1e1e;
 }
 .mobile.button {
   margin-left: 2rem;
@@ -380,6 +384,12 @@ option {
   display: flex;
   font-size: 5rem;
   gap: 1rem;
+  justify-content: center;
+  width: 100%;
+}
+.hrs, .mins, .sec {
+  width: 23%;
+  text-align: center;
 }
 .hero {
   display: flex;
@@ -448,6 +458,11 @@ option {
   margin: 2rem auto;
   color: #fff;
   cursor: pointer;
+}
+.mobile:hover {
+  animation: zoom 0.5s ease-in-out;
+  background: transparent;
+  border: 1px solid #d434fe;
 }
 .head {
   text-align: center;
