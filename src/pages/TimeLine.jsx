@@ -1,8 +1,8 @@
-import React, { forwardRef } from "react";
+import React from "react";
 
 const TimeLine = () => {
   return (
-    <div className="timeline" id="time">
+    <div className="timeline">
       <div className="timeline__header">
         <h2>Timeline</h2>
         <p>
