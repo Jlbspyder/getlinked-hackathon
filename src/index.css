@@ -1762,7 +1762,14 @@ footer {
     margin-left: 3rem;
   }
   .time {
+    gap: 0;
     margin-left: 2rem;
+    justify-content: left;
+    width: 45%;
+  }
+  .hrs, .mins, .sec {
+    width: 100%;
+    text-align: left;
   }
   .chain {
     display: block;
@@ -3033,6 +3040,10 @@ footer {
     color: #fff;
     width: 150px;
     height: 150px;
+  }
+  .time {
+    font-size: 4rem;
+    gap: 1rem;
   }
 }
 @media (min-width: 450px) and (max-width: 1200px) {
