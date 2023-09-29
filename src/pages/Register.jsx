@@ -1,16 +1,55 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom"
+import React, { useState, useEffect } from "react";
+import Confirmation from "./Confirmation";
 
 const Register = () => {
+  const [category, setCategory] = useState("");
+  const [size, setSize] = useState("");
+  const [isSubmit, setIsSubmit] = useState(false);
+  const [Submit, setSubmit] = useState(false);
+  const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
     team: "",
     topic: "",
-    msg: "",
     mail: "",
     phone: "",
     agree: false,
   });
 
+  
+  const onSubmit = (e) => {
+    e.preventDefault();
+    setErrors(validate(formData));
+    setIsSubmit(true);
+  };
+  useEffect(() => {
+    if (Object.keys(errors).length === 0 && isSubmit) {
+      setSubmit(true)
+    }
+  }, [errors]);
+
+  const validate = (values) => {
+    const errors = {};
+    const mailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+    const numRegex = /^\+?[1-9][0-9]{7,14}$/;
+    if (!values.team) {
+      errors.team = "This field is required!";
+    }
+    if (!values.mail) {
+      errors.mail = "This field is required!";
+    } else if (!mailRegEx.test(values.mail)) {
+      errors.mail = "Please insert a valid email!";
+    }
+    if (!values.phone) {
+      errors.phone = "This field is required!";
+    } else if (!numRegex.test(values.phone)) {
+      errors.phone = "Please insert a valid phone number!";
+    }
+    if (!values.agree) {
+      errors.agree = "You must agree to the terms and conditions!";
+    }
+    return errors;
+  };
+  
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -23,7 +62,7 @@ const Register = () => {
   };
   return (
     <>
-      <div className="register">
+      {!Submit ? <div className="register">
         <img src="/images/sata-star.png" className="reg-satastar" />
         <img src="/images/sata-star.png" className="reg-satastar2" />
         <img src="/images/gray-star.png" className="reg-graystar" />
@@ -47,7 +86,7 @@ const Register = () => {
           </picture>
         </div>
         <div className="reg-form">
-          <form className="ctl">
+          <form className="ctl" onSubmit={onSubmit}>
             <h2 className="regis">Register</h2>
             <p>Be part of this movement!</p>
             <h1>create your account</h1>
@@ -61,6 +100,7 @@ const Register = () => {
                   value={formData.team}
                   onChange={handleChange}
                 />
+                <small>{errors.team}</small>
               </div>
               <div className="form-control ctrl">
                 <label htmlFor="phone">Phone</label>
@@ -71,18 +111,20 @@ const Register = () => {
                   value={formData.phone}
                   onChange={handleChange}
                 />
+                <small>{errors.phone}</small>
               </div>
             </div>
             <div className="form-mid">
               <div className="form-control ctrl">
                 <label htmlFor="email">Email</label>
                 <input
-                  type="text"
-                  mame="mail"
+                  type="email"
+                  name="mail"
                   placeholder="Enter your email address"
                   value={formData.mail}
                   onChange={handleChange}
                 />
+                <small>{errors.mail}</small>
               </div>
               <div className="form-control ctrl">
                 <label htmlFor="topic">Project Topic</label>
@@ -99,7 +141,12 @@ const Register = () => {
               <div className="control">
                 <div className="top-select">
                   <label htmlFor="category">Category</label>
-                  <select name="category" id="category">
+                  <select
+                    name="category"
+                    id="category"
+                    value={category}
+                    onChange={(e) => setCategory(e.target.value)}
+                  >
                     <option hidden value="">
                       Select your category
                     </option>
@@ -112,7 +159,12 @@ const Register = () => {
                 </div>
                 <div className="down-select">
                   <label htmlFor="size">Group Size</label>
-                  <select name="size" id="size">
+                  <select
+                    name="size"
+                    id="size"
+                    value={size}
+                    onChange={(e) => setSize(e.target.value)}
+                  >
                     <option hidden value="">
                       Select
                     </option>
@@ -139,11 +191,17 @@ const Register = () => {
                 I agree with the event terms and conditions and privacy policy
               </label>
             </div>
-            <Link to="/confirmation"><button className="mobile click">Submit</button></Link>
-            <Link to="/confirmation"><button className="btn reg">Register Now</button></Link>
+            <small>{errors.agree}</small>
+
+            <button className="mobile click" type="submit" >
+              Submit
+            </button>
+            <button className="btn reg" type="submit">
+              Register Now
+            </button>
           </form>
         </div>
-      </div>
+      </div> : <Confirmation />}
     </>
   );
 };
