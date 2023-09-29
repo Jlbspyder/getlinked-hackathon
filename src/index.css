@@ -66,11 +66,11 @@ body {
   z-index: 9999;
   background: #1e1e1e;
   transform: translateX(100%);
-  transition: all 350ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .mobile-menu.active {
   transform: translateX(0%);
-  transition: all 350ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .menu-list {
   margin: 3rem 0 5rem 0;
@@ -95,7 +95,7 @@ body {
   margin: 2.5rem 3rem 0 83%;
 }
 .call.close-btn {
-  margin: 1rem 3rem 3rem 0;
+  margin: 1rem 3rem 3rem 1rem;
   padding: 5px 5px 0 0;
   width: 40px;
   height: 40px;
@@ -116,6 +116,7 @@ ul,
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   animation: slow 0.5s ease-in-out;
 }
@@ -134,11 +135,19 @@ form {
   width: 370px;
 }
 .success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 100vh;
+}
+.success p {
   font-size: 1.5rem;
-  background: green;
-  border-radius: 5px;
-  width: 90%;
-  text-align: center;
+}
+.sent {
+  width: 100px;
+  height: 100px;
 }
 .form-control {
   position: relative;
@@ -150,13 +159,14 @@ form {
 small {
   color: red;
   align-self: flex-start;
+  font-size: 10px;
 }
 .form-control input {
   background: transparent;
   border: 2px solid white;
   border-radius: 5px;
   width: 100%;
-  padding: 1.5em;
+  padding: 1.5em ;
   font-size: 1.1rem;
   color: #fff;
 }
@@ -275,17 +285,17 @@ small {
 }
 .line {
   position: absolute;
-  top: 28%;
+  top: 29.5%;
   left: 55%;
 }
 .woman {
   position: absolute;
-  top: 26%;
+  top: 27.5%;
   left: 59%;
 }
 .man {
   position: absolute;
-  top: 26%;
+  top: 27.5%;
   right: 30%;
 }
 .desktop-ctl {
@@ -314,9 +324,13 @@ small {
   width: 100%;
   margin-top: 5px;
 }
+option {
+  color: #d434fe;
+}
 .form-control.ctrl {
   align-items: flex-start;
   font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 .form-control.ctrl input {
   padding: 1.3em;
@@ -362,6 +376,11 @@ small {
   display: none;
 }
 /* Hero Styles */
+.time {
+  display: flex;
+  font-size: 5rem;
+  gap: 1rem;
+}
 .hero {
   display: flex;
   flex-direction: column;
@@ -387,6 +406,11 @@ small {
   text-align: center;
   font-size: 4rem;
   word-spacing: 0.5rem;
+}
+.hero__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .hero__img {
   position: relative;
@@ -634,6 +658,7 @@ small {
   padding: 2rem;
   margin-top: 3rem;
   border-bottom: 1px solid rgb(61, 56, 56);
+  animation: slow 0.5s ease-in-out;
 }
 .faqs__img {
   position: relative;
@@ -686,21 +711,43 @@ small {
   margin-bottom: 4rem;
   line-height: 1.8rem;
 }
-.questions p {
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 2px solid #d434fe;
-  text-align: left;
-  margin-bottom: 2rem;
-  padding-bottom: 0.8rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  width: 100%;
 }
-.questions p span {
+.question p {
+  width: 90%;
+  text-align: left;
+}
+.quest {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.quest small {
+  text-align: left;
+  margin-bottom: 10px;
+  font-style: italic;
+  font-size: 0.8rem;
+  color: var(--primary);
+  animation: slow 0.5s ease-in-out;
+}
+.question span {
   color: #d434fe;
-  float: right;
+  font-size: 2rem;
 }
 .timeline {
   position: relative;
   border-top: 1px solid rgb(61, 56, 56);
   border-bottom: 1px solid rgb(61, 56, 56);
   padding: 2rem;
+  animation: slow 0.5s ease-in-out;
 }
 .timeline__agenda {
   display: block;
@@ -1462,6 +1509,7 @@ footer {
   }
   .form-wrapper {
     width: 50%;
+    height: 450px;
   }
   .form {
     width: 90%;
@@ -1469,13 +1517,6 @@ footer {
     background: #211a33;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     border-radius: 5px;
-  }
-  .success {
-    font-size: 1.5rem;
-    background: green;
-    border-radius: 5px;
-    width: 90%;
-    text-align: center;
   }
   form {
     width: 80%;
@@ -1512,6 +1553,14 @@ footer {
     padding: 0.7em 3em;
     margin: 2rem auto;
     font-size: 1.5rem;
+  }
+  .success {
+    gap: 1rem;
+    height: 100%;
+  }
+  .sent {
+    width: 200px;
+    height: 200px;
   }
   #msg {
     border-radius: 5px;
@@ -1606,17 +1655,17 @@ footer {
   }
   .line {
     position: absolute;
-    top: 25.7%;
+    top: 27%;
     left: 69%;
   }
   .woman {
     position: absolute;
-    top: 22.5%;
+    top: 23.5%;
     left: 70%;
   }
   .man {
     position: absolute;
-    top: 22%;
+    top: 23%;
     left: 71.5%;
   }
   .ctl {
@@ -1645,10 +1694,6 @@ footer {
   #size,
   #category {
     padding: 1em;
-    background: transparent;
-    border: 2px solid white;
-    border-radius: 5px;
-    color: #fff;
     width: 97%;
   }
   .down-select label,
@@ -1698,7 +1743,11 @@ footer {
   .hero__info {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     margin-left: 3rem;
+  }
+  .time {
+    margin-left: 2rem;
   }
   .chain {
     display: block;
@@ -2008,6 +2057,11 @@ footer {
     position: absolute;
     bottom: -5%;
     right: 18%;
+  }
+  .question {
+    width: 100%;
+    font-size: 1rem;
+    padding-bottom: 0;
   }
   .mobile-timeline__agenda {
     display: none;
@@ -2959,6 +3013,11 @@ footer {
   .top-select select,
   .down-select select {
     font-size: 10px;
+  }
+  .sent {
+    color: #fff;
+    width: 150px;
+    height: 150px;
   }
 }
 @media (min-width: 450px) and (max-width: 1200px) {
