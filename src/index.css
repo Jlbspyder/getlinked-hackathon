@@ -717,11 +717,13 @@ option {
 .faq-sata {
   position: absolute;
   top: -5%;
+  width: 1.2rem;
 }
 .faq-whitestar {
   position: absolute;
   bottom: -5%;
   right: 25%;
+  width: 1.2rem;
 }
 .attributes__info .lead {
   margin-bottom: 4rem;
