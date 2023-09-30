@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import AOS from "aos"
+import "aos/dist/aos.css"
 import { data } from "../data"
 
 const Faqs = () => {
@@ -10,6 +12,9 @@ const Faqs = () => {
     }
     setClicked(index)
   }
+  useEffect(()=> {
+    AOS.init({duration: 1000})
+  })
 
   return (
     <div className="faqs flex" id="faq">
@@ -22,11 +27,11 @@ const Faqs = () => {
           We got answers to the questions that you might want to ask about
           getlinked Hackathon 1.0
         </p>
-        <div className="questions">
+        <div className="questions" data-aos="fade-right">
           {data.map((item, index) => (
             <div className="quest" key={index}>
               <div className="question" onClick={() => handleClick(index)}>
-                  <p>{item.question}</p>
+                  <p data-aos="fade-right">{item.question}</p>
                   <span>{clicked === index ? "-" : "+"}</span>
               </div>
               {clicked === index ? <small>{item.answer}</small> : null}
