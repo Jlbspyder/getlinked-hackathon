@@ -28,7 +28,7 @@ const Privacy = () => {
         </div>
         <div className="privacy__terms">
           <p className="first">
-            At getlinked tech Hackathon, we value your privacy and are committed
+            At grtlinked tech Hackathon, we value your privacy and are committed
             to protecting your personal information. This Privacy policy
             outlines how we collect, use, dislose, and safeguard your data when
             you participate in our tech hackathon events. By participating you
