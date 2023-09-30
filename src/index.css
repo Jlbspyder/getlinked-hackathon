@@ -2423,11 +2423,8 @@ footer {
   .reward-purpleBg2 {
     display: none;
   }
-  .sponsors {
-    gap: 4rem;
-  }
   .sponsors .sponsor {
-    width: 1120px;
+    width: 91%;
   }
   .sponsors__info {
     margin-top: 3rem;
@@ -2993,7 +2990,7 @@ footer {
     width: 300px;
   }
   .sponsors .sponsor {
-    width: 760px;
+    width: 85%;
   }
   .confirm {
     padding-bottom: 0;
