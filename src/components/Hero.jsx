@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 const Hero = () => {
   let currentTime = new Date().toLocaleTimeString();
@@ -8,6 +10,7 @@ const Hero = () => {
   let hrs = new Date().getHours();
   let mins = new Date().getMinutes();
   let sec = new Date().getSeconds();
+
 
   const updateTime = () => {
     let currentTime = new Date().toLocaleTimeString();
@@ -19,6 +22,10 @@ const Hero = () => {
   const minutes = mins.toString().padStart(2, "0");
   const seconds = sec.toString().padStart(2, "0");
 
+  useEffect(()=> {
+    AOS.init({duration: 1000})
+  })
+
   return (
     <>
       <div>
@@ -28,11 +35,12 @@ const Hero = () => {
           className="purple-flare-curved"
         />
         <div className="head">
-          <h3>Igniting a Revolution in HR Innovation</h3>
+          <h3 data-aos="fade-left">Igniting a Revolution in HR Innovation</h3>
           <img
             src="/images/header-line-mobile.png"
             alt=""
             className="mobile-line"
+            data-aos="fade-right"
           />
         </div>
         <div className="hero">
