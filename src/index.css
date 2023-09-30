@@ -35,6 +35,7 @@ body {
   font-family: "Montserrat", sans-serif;
   background: var(--darkBlue);
   color: #fff;
+  overflow-x: hidden;
 }
 .container {
   min-width: 400px;
@@ -65,11 +66,11 @@ body {
   z-index: 9999;
   background: #1e1e1e;
   transform: translateX(100%);
-  transition: all 350ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .mobile-menu.active {
   transform: translateX(0%);
-  transition: all 350ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .menu-list {
   margin: 3rem 0 5rem 0;
@@ -87,17 +88,21 @@ body {
   border-radius: 50%;
   border: 1px solid #d434fe;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-  background: #1e1e1e;
+  background:  linear-gradient(to left, #903aff, #ff26b9);
   color: #fff;
   font-weight: bold;
   font-size: 1.8rem;
   margin: 2.5rem 3rem 0 83%;
 }
 .call.close-btn {
-  margin: 1rem 3rem 3rem 0;
-  padding: 5px 5px 0 0;
+  position: relative;
+  margin: 1rem 3rem 3rem 1rem;
+  padding-right: 5px;
   width: 40px;
   height: 40px;
+}
+.call.close-btn:hover {
+  background: #1e1e1e;
 }
 .mobile.button {
   margin-left: 2rem;
@@ -115,23 +120,38 @@ ul,
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding-inline: 3rem;
   animation: slow 0.5s ease-in-out;
 }
 .call__info p {
-  margin: 2rem 0;
+  margin: 2rem 0 3rem 1rem;
   width: 85%;
 }
 .call__info h2 {
   color: var(--purplishPink);
   width: 80%;
+  margin-left: 1rem;
   line-height: 1.4;
   font-size: 1.7rem;
 }
 form {
   width: 370px;
-  padding-inline: 1rem;
+}
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 100vh;
+}
+.success p {
+  font-size: 1.5rem;
+}
+.sent {
+  width: 100px;
+  height: 100px;
 }
 .form-control {
   position: relative;
@@ -140,32 +160,56 @@ form {
   align-items: center;
   margin-bottom: 30px;
 }
+small {
+  color: red;
+  align-self: flex-start;
+  font-size: 10px;
+}
 .form-control input {
   background: transparent;
   border: 2px solid white;
   border-radius: 5px;
   width: 100%;
-  padding: 1.5em;
+  padding: 1.5em ;
   font-size: 1.1rem;
   color: #fff;
 }
 .form-control input:focus {
   outline: 0;
+  border: 2px solid #d434fe;
 }
 .form-control label {
   position: absolute;
   top: 25px;
-  left: 0;
+  left: 15px;
+}
+.form-control label span {
+  display: inline-block;
+  font-size: 16px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.form-control input:focus + label span,
+.form-control textarea:focus + label span,
+.form-control input:valid + label span {
+  transform: translateY(-49px);
+  color: var(--purplishPink);
+}
+.form-control textarea:focus + label span {
+  transform: translateY(-49px);
+  color: var(--purplishPink);
 }
 #msg {
   width: 100%;
   background: transparent;
+  padding: 1rem 0 0 1rem;
   border: 2px solid white;
   border-radius: 8px;
   color: #fff;
 }
 #msg:focus {
   outline: 0;
+  border: 2px solid #d434fe;
 }
 .post {
   display: flex;
@@ -184,7 +228,7 @@ form {
 .contact-whitestar {
   position: absolute;
   bottom: 20%;
-  right: 5%;
+  right: 0;
   width: 1.3rem;
 }
 .contact-satastar {
@@ -228,19 +272,20 @@ form {
   margin: 0.5rem 0 2rem 0;
   font-size: 1.7rem;
 }
-.register h2 {
-  color: var(--purplishPink);
-  margin: 1rem 0 2rem -18rem;
+.register .regis {
+  display: none;
 }
 .mob {
-  display: none;
+  display: block;
+  color: var(--purplishPink);
+  padding: 2rem 0 2rem 11rem;
+  width: 100%;
 }
 .designer {
   width: 100%;
 }
 .reg__img {
   width: 300px;
-  margin-top: 3rem;
 }
 .line {
   position: absolute;
@@ -249,7 +294,7 @@ form {
 }
 .woman {
   position: absolute;
-  top: 27.7%;
+  top: 27.5%;
   left: 59%;
 }
 .man {
@@ -261,8 +306,9 @@ form {
   display: none;
 }
 .ctl {
-  width: 90%;
+  width: 100%;
   margin: auto;
+  padding-inline: 2rem;
 }
 .top-select {
   width: 58%;
@@ -282,9 +328,13 @@ form {
   width: 100%;
   margin-top: 5px;
 }
+option {
+  color: #d434fe;
+}
 .form-control.ctrl {
   align-items: flex-start;
   font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 .form-control.ctrl input {
   padding: 1.3em;
@@ -324,12 +374,23 @@ form {
   width: 1rem;
 }
 .reg-graystar2 {
- display: none;
+  display: none;
 }
 .reg-whitestar {
   display: none;
 }
 /* Hero Styles */
+.time {
+  display: flex;
+  font-size: 5rem;
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+}
+.hrs, .mins, .sec {
+  width: 23%;
+  text-align: center;
+}
 .hero {
   display: flex;
   flex-direction: column;
@@ -355,6 +416,21 @@ form {
   text-align: center;
   font-size: 4rem;
   word-spacing: 0.5rem;
+}
+.hero__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero__img {
+  position: relative;
+}
+.moon {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  width: 330px;
+  animation: rotate 10s infinite linear;
 }
 .mobile-guy {
   width: 380px;
@@ -383,6 +459,11 @@ form {
   margin: 2rem auto;
   color: #fff;
   cursor: pointer;
+}
+.mobile:hover {
+  animation: zoom 0.5s ease-in-out;
+  background: transparent;
+  border: 1px solid #d434fe;
 }
 .head {
   text-align: center;
@@ -593,6 +674,7 @@ form {
   padding: 2rem;
   margin-top: 3rem;
   border-bottom: 1px solid rgb(61, 56, 56);
+  animation: slow 0.5s ease-in-out;
 }
 .faqs__img {
   position: relative;
@@ -645,21 +727,43 @@ form {
   margin-bottom: 4rem;
   line-height: 1.8rem;
 }
-.questions p {
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-bottom: 2px solid #d434fe;
-  text-align: left;
-  margin-bottom: 2rem;
-  padding-bottom: 0.8rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  width: 100%;
 }
-.questions p span {
+.question p {
+  width: 90%;
+  text-align: left;
+}
+.quest {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.quest small {
+  text-align: left;
+  margin-bottom: 10px;
+  font-style: italic;
+  font-size: 0.8rem;
+  color: var(--primary);
+  animation: slow 0.5s ease-in-out;
+}
+.question span {
   color: #d434fe;
-  float: right;
+  font-size: 2rem;
 }
 .timeline {
   position: relative;
   border-top: 1px solid rgb(61, 56, 56);
   border-bottom: 1px solid rgb(61, 56, 56);
   padding: 2rem;
+  animation: slow 0.5s ease-in-out;
 }
 .timeline__agenda {
   display: block;
@@ -1202,7 +1306,13 @@ footer {
   cursor: pointer;
 }
 .footer-one .inline .in {
-  padding-left: 1rem;
+  padding-left: 1rem
+}
+.footer-one .inline .in .active {
+  color: #fff;
+}
+.footer-one .inline .in .active:hover {
+  color: var(--purplishPink);
 }
 .footer-one .in:hover {
   color: var(--purplishPink);
@@ -1285,7 +1395,7 @@ footer {
 }
 .arrow-up {
   display: none;
-} 
+}
 @keyframes slow {
   0% {
     opacity: 0;
@@ -1294,11 +1404,19 @@ footer {
     opacity: 1;
   }
 }
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 @media (min-width: 770px) {
   .container {
     margin: 30px auto;
-    max-width: 1235px;
+    max-width: 1440px;
   }
   .hamburger {
     display: none;
@@ -1315,6 +1433,16 @@ footer {
   }
   .desktop-logo {
     margin-left: 3rem;
+  }
+  .hero__img {
+    width: 530px;
+    height: 460px;
+  }
+  .mobile-guy {
+    width: 100%;
+  }
+  .moon {
+    margin-right: 3.5rem;
   }
   .menu {
     display: flex;
@@ -1384,13 +1512,14 @@ footer {
     display: block;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 3rem;
     transition: all 350ms cubic-bezier(0.16, 1, 0.3, 1);
     animation: slow 1s ease-in-out;
   }
   .call__info {
     padding-left: 8rem;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
   .call__info h2 {
     margin-top: 2rem;
@@ -1400,10 +1529,15 @@ footer {
   }
   .post {
     align-items: flex-start;
+    padding-left: 1rem;
+  }
+  .form-wrapper {
+    width: 50%;
+    height: 450px;
   }
   .form {
-    width: 40%;
-    margin-right: 6.5rem;
+    width: 90%;
+    padding: 1.5rem 0 1.5rem 0;
     background: #211a33;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     border-radius: 5px;
@@ -1425,8 +1559,18 @@ footer {
     top: 20px;
     left: 20px;
   }
+  .form-control input:focus + label span,
+  .form-control textarea:focus + label span
+  .form-control input:valid + label span {
+  transform: translateY(-43px);
+  color: var(--purplishPink);
+}
+  .form-control textarea:focus + label span {
+  transform: translateY(-43px);
+  color: var(--purplishPink);
+}
   .form h2 {
-    margin: 2rem 0 2rem 4.5rem;
+    margin: 1rem 0 3rem 4.5rem;
     color: var(--purplishPink);
   }
   .btn.sub {
@@ -1434,12 +1578,20 @@ footer {
     margin: 2rem auto;
     font-size: 1.5rem;
   }
+  .success {
+    gap: 1rem;
+    height: 100%;
+  }
+  .sent {
+    width: 200px;
+    height: 200px;
+  }
   #msg {
     border-radius: 5px;
   }
   .contact-whitestar {
     bottom: 0;
-    right: 0;
+    right: 3%;
     z-index: 500;
     width: 1.3rem;
   }
@@ -1518,22 +1670,26 @@ footer {
     margin-top: 0.5rem;
   }
   .register h2 {
+    display: none;
     color: var(--purplishPink);
     margin: 1rem 0 2rem 0;
   }
+  .register .regis {
+    display: block;
+  }
   .line {
     position: absolute;
-    top: 25.7%;
+    top: 27%;
     left: 69%;
   }
   .woman {
     position: absolute;
-    top: 22.5%;
+    top: 23.5%;
     left: 70%;
   }
   .man {
     position: absolute;
-    top: 22%;
+    top: 23%;
     left: 71.5%;
   }
   .ctl {
@@ -1562,10 +1718,6 @@ footer {
   #size,
   #category {
     padding: 1em;
-    background: transparent;
-    border: 2px solid white;
-    border-radius: 5px;
-    color: #fff;
     width: 97%;
   }
   .down-select label,
@@ -1615,7 +1767,19 @@ footer {
   .hero__info {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     margin-left: 3rem;
+  }
+  .time {
+    gap: 0;
+    font-size: 2rem;
+    margin-left: 2rem;
+    justify-content: left;
+    width: 45%;
+  }
+  .hrs, .mins, .sec {
+    width: 20%;
+    text-align: left;
   }
   .chain {
     display: block;
@@ -1722,7 +1886,7 @@ footer {
     border-right: 1px solid rgb(61, 56, 56);
     border-top: 1px solid rgb(61, 56, 56);
     margin-top: -1rem;
-    width: 98%;
+    width: 97%;
   }
   .idea__pix {
     position: relative;
@@ -1926,6 +2090,11 @@ footer {
     bottom: -5%;
     right: 18%;
   }
+  .question {
+    width: 100%;
+    font-size: 1rem;
+    padding-bottom: 0;
+  }
   .mobile-timeline__agenda {
     display: none;
   }
@@ -1953,7 +2122,7 @@ footer {
     height: 800px;
     justify-content: space-around;
     align-items: center;
-  }
+  }  
   .desktop-wrapper {
     display: block;
   }
@@ -2435,7 +2604,7 @@ footer {
   .arrow-up {
     display: block;
     position: absolute;
-    right: -1%;
+    right: 0;
     bottom: 30%;
     width: 30px;
     height: 30px;
@@ -2489,9 +2658,6 @@ footer {
   }
   .footer-one h2 span {
     color: var(--purplishPink);
-  }
-  .footer-one .in {
-    border-left: 2px solid #d434fe;
   }
   .footer-one .inline {
     display: flex;
@@ -2585,6 +2751,20 @@ footer {
   }
   .hero__info p {
     width: 90%;
+  }
+  .moon {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 330px;
+  }
+  .moon {
+    margin-right: 1rem;
+  }
+  .mobile-guy {
+    width: 500px;
+    height: 500px;
+    margin-bottom: -3px;
   }
   .hero__info .hero-title-top {
     margin: 0 0 0 2rem;
@@ -2840,23 +3020,14 @@ footer {
   .arrow-up {
     right: 0;
   }
+  .desktop-call {
+    margin-top: 5rem;
+  }
   .call__info p {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
-  .line {
-    position: absolute;
-    top: 25%;
-    left: 76.5%;
-  }
-  .woman {
-    position: absolute;
-    top: 21.8%;
-    left: 78%;
-  }
-  .man {
-    position: absolute;
-    top: 21.5%;
-    left: 80%;
+  .form h2 {
+    margin-left: 2.5rem;
   }
   .register h1 {
     font-size: 1.3rem;
@@ -2877,5 +3048,21 @@ footer {
   .top-select select,
   .down-select select {
     font-size: 10px;
+  }
+  .sent {
+    color: #fff;
+    width: 150px;
+    height: 150px;
+  }
+  .time {
+    font-size: 1.5rem;
+    gap: 1rem;
+  }
+}
+@media (min-width: 450px) and (max-width: 1200px) {
+  .man,
+  .woman,
+  .line {
+    display: none;
   }
 }

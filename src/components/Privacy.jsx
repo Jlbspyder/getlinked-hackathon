@@ -2,7 +2,7 @@ import React from "react";
 
 const Privacy = () => {
   return (
-    <div className="privacy">
+    <div className="privacy" id="privacy">
       <img src="/images/gray-star.png" className="priv-graystar" />
       <img src="/images/gray-star.png" className="priv-graystar2" />
       <img src="/images/white-star.png" className="priv-whitestar" />
