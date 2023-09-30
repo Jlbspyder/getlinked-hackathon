@@ -1,6 +1,12 @@
-import React from "react";
+import React, {useEffect} from "react";
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 const TimeLine = () => {
+useEffect(()=> {
+  AOS.init({duration: 1000})
+})
+
   return (
     <div className="timeline" id="time">
       <div className="timeline__header">
@@ -12,21 +18,21 @@ const TimeLine = () => {
       </div>
       <div className="timeline__agenda">
         <div className="left">
-          <h2>Hackathon Announcement</h2>
-          <p>
+          <h2 data-aos="fade-right">Hackathon Announcement</h2>
+          <p data-aos="zoom-in">
             The getlinked tech hackathon 1.0 is formally announced to the
             general public and teams begin to get ready to register
           </p>
-          <h2>November 18, 2023</h2>
-          <h2>Teams Registration ends</h2>
-          <p>Interested Participants are no longer allowed to register</p>
-          <h2>November 18, 2023</h2>
-          <h2>Getlinked Hackathon 1.0 Officially Begins</h2>
-          <p>
+          <h2 data-aos="fade-right">November 18, 2023</h2>
+          <h2 data-aos="fade-right">Teams Registration ends</h2>
+          <p data-aos="zoom-in">Interested Participants are no longer allowed to register</p>
+          <h2 data-aos="fade-right">November 18, 2023</h2>
+          <h2 data-aos="fade-right">Getlinked Hackathon 1.0 Officially Begins</h2>
+          <p data-aos="zoom-in">
             Accepted teams can now proceed to build their ground breaking skill
             driven solutions
           </p>
-          <h2>November 18, 2023</h2>
+          <h2 data-aos="fade-right">November 18, 2023</h2>
         </div>
         <div className="desktop-wrapper">
           <div className="bar1"></div>
@@ -49,21 +55,21 @@ const TimeLine = () => {
           <div className="six">6</div>
         </div>
         <div className="right">
-          <h2>November 18, 2023</h2>
-          <h2>Team Registration begins</h2>
-          <p>
+          <h2 data-aos="fade-left">November 18, 2023</h2>
+          <h2 data-aos="fade-left">Team Registration begins</h2>
+          <p data-aos="zoom-in">
             Interested teams can now show their interest in the getlinked tech
             hackathon 1.0 2023 by proceeding to register
           </p>
-          <h2>November 18, 2023</h2>
-          <h2>Announcement of the accepted teams and ideas</h2>
-          <p>
+          <h2 data-aos="fade-left">November 18, 2023</h2>
+          <h2 data-aos="fade-left">Announcement of the accepted teams and ideas</h2>
+          <p data-aos="zoom-in">
             All teams whom ideas have been accepted into the getlinked tech
             hackathon 1.0 2023 are formally announced
           </p>
-          <h2>November 18, 2023</h2>
-          <h2>Demo Day</h2>
-          <p>
+          <h2 data-aos="fade-left">November 18, 2023</h2>
+          <h2 data-aos="fade-left">Demo Day</h2>
+          <p data-aos="zoom-in">
             Teams get the opportunity to pitch their projects to judges. The
             winner of the hackathon will also be announced on this day
           </p>
@@ -71,39 +77,39 @@ const TimeLine = () => {
       </div>
       <div className="mobile-timeline__agenda">
         <div className="agenda">
-          <h2>Hackathon Announcement</h2>
-          <p>
+          <h2 data-aos="zoom-in">Hackathon Announcement</h2>
+          <p data-aos="zoom-in">
             The getlinked tech hackathon 1.0 is formally announced to the
             general public and teams begin to get ready to register
           </p>
-          <h2>November 18, 2023</h2>
-          <h2>Team Registration begins</h2>
-          <p>
+          <h2 data-aos="zoom-in">November 18, 2023</h2>
+          <h2 data-aos="zoom-in">Team Registration begins</h2>
+          <p data-aos="zoom-in">
             Interested teams can now show their interest in the getlinked tech
             hackathon 1.0 2023 by proceeding to register
           </p>
-          <h2>November 18, 2023</h2>
-          <h2>Teams Registration ends</h2>
-          <p>Interested Participants are no longer allowed to register</p>
-          <h2>November 18, 2023</h2>
-          <h2>Announcement of the accepted teams and ideas</h2>
-          <p>
+          <h2 data-aos="zoom-in">November 18, 2023</h2>
+          <h2 data-aos="zoom-in">Teams Registration ends</h2>
+          <p data-aos="zoom-in">Interested Participants are no longer allowed to register</p>
+          <h2 data-aos="zoom-in">November 18, 2023</h2>
+          <h2 data-aos="zoom-in">Announcement of the accepted teams and ideas</h2>
+          <p data-aos="zoom-in">
             All teams whom ideas have been accepted into the getlinked tech
             hackathon 1.0 2023 are formally announced
           </p>
-          <h2>November 18, 2023</h2>
-          <h2>Getlinked Hackathon 1.0 Officially Begins</h2>
-          <p>
+          <h2 data-aos="zoom-in">November 18, 2023</h2>
+          <h2 data-aos="zoom-in">Getlinked Hackathon 1.0 Officially Begins</h2>
+          <p data-aos="zoom-in">
             Accepted teams can now proceed to build their ground breaking skill
             driven solutions
           </p>
-          <h2>November 18, 2023</h2>
-          <h2>Demo Day</h2>
-          <p>
+          <h2 data-aos="zoom-in">November 18, 2023</h2>
+          <h2 data-aos="zoom-in">Demo Day</h2>
+          <p data-aos="zoom-in">
             Teams get the opportunity to pitch their projects to judges. The
             winner of the hackathon will also be announced on this day
           </p>
-          <h2>November 18, 2023</h2>
+          <h2 data-aos="zoom-in">November 18, 2023</h2>
           <div className="wrapper">
             <div className="bar1"></div>
             <div className="bar2"></div>
