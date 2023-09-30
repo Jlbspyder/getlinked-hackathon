@@ -430,6 +430,7 @@ option {
   top: 0;
   right: 5%;
   width: 330px;
+  animation: rotate 10s infinite linear;
 }
 .mobile-guy {
   width: 380px;
@@ -1403,6 +1404,14 @@ footer {
     opacity: 1;
   }
 }
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 @media (min-width: 770px) {
   .container {
@@ -2113,7 +2122,7 @@ footer {
     height: 800px;
     justify-content: space-around;
     align-items: center;
-  }
+  }  
   .desktop-wrapper {
     display: block;
   }
@@ -2745,9 +2754,12 @@ footer {
   }
   .moon {
     position: absolute;
-    top: 0;
+    top: 5%;
     right: 5%;
     width: 330px;
+  }
+  .moon {
+    margin-right: 1rem;
   }
   .mobile-guy {
     width: 500px;
