@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 const Privacy = () => {
+  useEffect(()=> {
+    AOS.init({duration: 1000})
+  })
+
   return (
     <div className="privacy" id="privacy">
       <img src="/images/gray-star.png" className="priv-graystar" />
@@ -73,6 +79,7 @@ const Privacy = () => {
             src="/images/padlock-mobile.png"
             alt="padlock"
             className="mobile-padlock"
+            data-aos="slide-up"
           />
         </picture>
       </div>

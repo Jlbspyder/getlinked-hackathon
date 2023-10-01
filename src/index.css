@@ -1087,6 +1087,11 @@ option {
 .sponsor {
   position: relative;
   margin-bottom: 5rem;
+  width: 400px;
+  padding-inline: 1.5rem;
+}
+.mobile-sponsors {
+  width: 100%;
 }
 .sponsor-purpleBg {
   position: absolute;
@@ -1774,14 +1779,14 @@ footer {
   }
   .time {
     gap: 0;
-    font-size: 2rem;
-    margin-left: 2rem;
+    font-size: 4rem;
+    margin-left: 1rem;
     justify-content: left;
-    width: 45%;
+    width: 280px;
   }
   .hrs, .mins, .sec {
-    width: 20%;
-    text-align: left;
+    width: 35%;
+    text-align: center;
   }
   .chain {
     display: block;
@@ -2442,9 +2447,9 @@ footer {
     width: 65%;
   }
   .sponsor {
-    position: relative;
     margin-bottom: 5rem;
     width: 80%;
+    padding: 0;
   }
   .sponsor-satastar {
     position: absolute;
@@ -3054,8 +3059,10 @@ footer {
     height: 150px;
   }
   .time {
-    font-size: 1.5rem;
-    gap: 1rem;
+    font-size: 2rem;
+  }
+  .hrs, .mins, .sec {
+    width: 25%;
   }
 }
 @media (min-width: 450px) and (max-width: 1200px) {
