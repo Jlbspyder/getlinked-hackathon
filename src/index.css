@@ -1526,10 +1526,7 @@ footer {
   }
   .call__info {
     padding-left: 8rem;
-    font-size: 1.5rem;
-  }
-  .call__info h2 {
-    margin-top: 2rem;
+    font-size: 1.4rem;
   }
   .call__info p {
     width: 100%;
@@ -1540,10 +1537,11 @@ footer {
   }
   .form-wrapper {
     width: 50%;
-    height: 450px;
+    height: 550px;
   }
   .form {
     width: 90%;
+    height: 100%;
     padding: 1.5rem 0 1.5rem 0;
     background: #211a33;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
@@ -1582,7 +1580,7 @@ footer {
   }
   .btn.sub {
     padding: 0.7em 3em;
-    margin: 2rem auto;
+    margin: auto;
     font-size: 1.5rem;
   }
   .success {
@@ -1604,7 +1602,7 @@ footer {
   }
   .contact-satastar {
     bottom: 16%;
-    left: 52%;
+    left: 49.2%;
     z-index: 500;
     width: 1.3rem;
   }
@@ -2430,9 +2428,9 @@ footer {
   .reward-purpleBg2 {
     display: none;
   }
-  .sponsors .sponsor {
+  /* .sponsors .sponsor {
     width: 91%;
-  }
+  } */
   .sponsors__info {
     margin-top: 3rem;
     text-align: center;
@@ -2448,7 +2446,7 @@ footer {
   }
   .sponsor {
     margin-bottom: 5rem;
-    width: 80%;
+    width: 90%;
     padding: 0;
   }
   .sponsor-satastar {
@@ -2489,6 +2487,7 @@ footer {
     right: 20%;
     width: 380px;
   }
+ 
   .privacy__info {
     width: 50%;
   }
