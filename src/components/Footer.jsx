@@ -2,7 +2,7 @@ import React from "react";
 import { Link as LinkRoll } from "react-scroll";
 import { Link } from "react-router-dom";
 import { BsInstagram } from "react-icons/bs";
-import { BsTwitter } from "react-icons/bs";
+import { RiTwitterXFill } from "react-icons/ri";
 import { BsFacebook } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import { LuPhoneCall } from "react-icons/lu";
@@ -104,25 +104,25 @@ const Footer = () => {
             </div>
             <div className="socials">
               <li>
-                <Link to="https//www.instagram.com/jlb_me/" target="_blank">
+                <Link to="https://www.instagram.com/jlb_me/" target="_blank">
                   <BsInstagram className="ig" />
                 </Link>
               </li>
-              <a href="https//www.twitter.com/jlbspyder/" target="_blank">
-                <li>
-                  <BsTwitter className="x" />
-                </li>
-              </a>
-              <a href="https//www.facebook.com/" target="_blank">
-                <li>
+              <li>
+                <Link to="https://www.twitter.com/jlbspyder/" target="_blank">
+                  <RiTwitterXFill className="x" />
+                </Link>
+              </li>
+              <li>
+                <Link to="https://www.facebook.com/" target="_blank">
                   <BsFacebook className="fb" />
-                </li>
-              </a>
-              <Link to="https//www.pinterest.com/" target="_blank">
-                <li>
+                </Link>
+              </li>
+              <li>
+                <Link to="https://www.pinterest.com/" target="_blank">
                   <BsLinkedin className="ind" />
-                </li>
-              </Link>
+                </Link>
+              </li>
             </div>
           </div>
         </div>
