@@ -1,0 +1,25 @@
+### Getlinked Landing Page
+
+This is a simple budget planner that allows users to be able to:
+
+- Register for the hackathon
+- See hover activities on all interactive element
+- View optimal layout according to device screen size
+
+### Links
+
+- Live Site URL: [https://peppy-pastelito-be94e8.netlify.app/](https://peppy-pastelito-be94e8.netlify.app/)
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- Mobile-first workflow
+- React Icons
+- React Router Dom
+- [React](https://reactjs.org/) - JS library
+
+## Author
+
+- Twitter - [@jlbspyder](https://www.twitter.com/jlbspyder)
