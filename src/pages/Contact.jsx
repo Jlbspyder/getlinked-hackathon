@@ -223,7 +223,7 @@ const Contact = () => {
           {!submit && (
             <div className="form">
               <h2>
-                Questions or need assiatance?
+                Questions or need assistance?
                 <br />
                 Let us know about it
               </h2>
