@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import Confirmation from "./Confirmation";
 
 const Register = () => {
-  const [category, setCategory] = useState("");
-  const [size, setSize] = useState("");
   const [isSubmit, setIsSubmit] = useState(false);
   const [Submit, setSubmit] = useState(false);
   const [errors, setErrors] = useState({});
