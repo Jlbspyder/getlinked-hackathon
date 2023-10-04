@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import Confirmation from "./Confirmation";
 
 const Register = () => {
-  const [category, setCategory] = useState("");
-  const [size, setSize] = useState("");
   const [isSubmit, setIsSubmit] = useState(false);
   const [Submit, setSubmit] = useState(false);
   const [errors, setErrors] = useState({});
@@ -13,6 +11,8 @@ const Register = () => {
     mail: "",
     phone: "",
     agree: false,
+    category: "",
+    size: ""
   });
 
   
@@ -46,6 +46,12 @@ const Register = () => {
     }
     if (!values.agree) {
       errors.agree = "You must agree to the terms and conditions!";
+    }
+    if (!values.category) {
+      errors.category = "You must select a category!"
+    }
+    if (!values.size) {
+      errors.size = "You must select a size!"
     }
     return errors;
   };
@@ -144,8 +150,8 @@ const Register = () => {
                   <select
                     name="category"
                     id="category"
-                    value={category}
-                    onChange={(e) => setCategory(e.target.value)}
+                    value={formData.category}
+                    onChange={handleChange}
                   >
                     <option hidden value="">
                       Select your category
@@ -156,14 +162,15 @@ const Register = () => {
                     <option>Expert</option>
                     <option>Guru</option>
                   </select>
+                  <small>{errors.category}</small>
                 </div>
                 <div className="down-select">
                   <label htmlFor="size">Group Size</label>
                   <select
                     name="size"
                     id="size"
-                    value={size}
-                    onChange={(e) => setSize(e.target.value)}
+                    value={formData.size}
+                    onChange={handleChange}
                   >
                     <option hidden value="">
                       Select
@@ -173,6 +180,7 @@ const Register = () => {
                     <option>20</option>
                     <option>50</option>
                   </select>
+                  <small>{errors.size}</small>
                 </div>
               </div>
             </div>
@@ -196,7 +204,7 @@ const Register = () => {
             <button className="mobile click" type="submit" >
               Submit
             </button>
-            <button className="btn reg" type="submit">
+            <button className="btn reg">
               Register Now
             </button>
           </form>
