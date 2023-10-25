@@ -1,4 +1,4 @@
-### Getlinked Landing Page
+### Getlinked Website Clone
 
 This is a simple budget planner that allows users to be able to:
 
