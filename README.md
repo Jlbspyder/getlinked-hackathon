@@ -1,6 +1,6 @@
 ### Getlinked Website Clone
 
-This is a simple budget planner that allows users to be able to:
+This is a simple conversion of the figma design of landing page into react components:
 
 - Register for the hackathon
 - See hover activities on all interactive element
