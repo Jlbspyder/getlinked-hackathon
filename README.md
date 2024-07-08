@@ -1,6 +1,6 @@
 ### Getlinked Website Clone
 
-This is a simple conversion of the figma design of landing page into react components:
+This is a simple conversion of the figma design of landing page into react components in which users can:
 
 - Register for the hackathon
 - See hover activities on all interactive element
